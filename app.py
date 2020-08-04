@@ -1,4 +1,4 @@
-'''from flask import Flask, render_template
+'''from flask import Flask, render_template,send_file
 
 app = Flask(__name__)
 
@@ -42,6 +42,9 @@ def test():
 @app.route('/myapp')
 def myapp():
     return render_template('myapp.html')
+@app.route('/downloadtheapp')
+def download():
+    return return send_file("./static/Phần mềm giải toán ngân hàng-(with update) (2).exe", as_attachment=True)
  
 if __name__ == '__main__': app.run(debug=True) 
  
